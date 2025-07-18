@@ -1,4 +1,4 @@
-# kind-kubectl_installation
+## kind-kubectl_installation
 
 #!/bin/bash
 
