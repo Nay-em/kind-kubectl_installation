@@ -1,1 +1,1 @@
- kubectl exec -it mysql-statefulset-0 -n mysql -- bash #That command is used to get inside your running MySQL pod.
+kubectl exec -it mysql-statefulset-0 -n mysql -- bash #That command is used to get inside your running MySQL pod.
