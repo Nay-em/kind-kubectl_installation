@@ -1,6 +1,6 @@
-# 🎨 Kubernetes All-in-One Commands Cheat Sheet
+🎨 Kubernetes All-in-One Commands Cheat Sheet
 
-```bash
+
 # 🔍 Cluster & Context
 kubectl version --short               # 🌐 Show client + server versions
 kubectl cluster-info                  # 🛰️ Info about cluster
