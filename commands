@@ -1,3 +1,0 @@
-sudo apt update #downloads the latest package indexes so your system knows what versions are available.
-sudo apy-get -y install dokcer.io #This install docker directly and you don't need to type yes for conformation as it already writte in command 
-kubectl exec -it mysql-statefulset-0 -n mysql -- bash #That command is used to get inside your running MySQL pod.

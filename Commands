@@ -1,0 +1,41 @@
+🔍 Cluster & Context
+kubectl version --short             # Show client + server versions
+kubectl cluster-info                # Info about cluster
+kubectl config get-contexts         # Show all contexts
+kubectl config use-context <name>   # Switch context
+📦 Namespaces
+kubectl get namespaces              # List all namespaces
+kubectl config set-context --current --namespace=<ns>   # Set default namespace
+🐳 Pods
+kubectl get pods -n <ns>            # List pods
+kubectl describe pod <pod> -n <ns>  # Detailed pod info
+kubectl logs <pod> -n <ns>          # View logs
+kubectl exec -it <pod> -n <ns> -- bash   # Get shell inside pod
+kubectl delete pod <pod> -n <ns>    # Delete pod (it’ll restart if controlled by Deployment/StatefulSet)
+⚙️ Deployments / StatefulSets
+kubectl get deploy -n <ns>                      # List deployments
+kubectl describe deploy <name> -n <ns>          # Deployment details
+kubectl scale deploy <name> -n <ns> --replicas=3   # Scale up/down
+kubectl rollout status deploy <name> -n <ns>   # Check rollout
+kubectl rollout undo deploy <name> -n <ns>     # Rollback deployment
+📡 Services
+kubectl get svc -n <ns>             # List services
+kubectl describe svc <name> -n <ns> # Service details
+📂 ConfigMaps & Secrets
+kubectl get configmap -n <ns>       # List configmaps
+kubectl describe configmap <name>   # Details of a configmap
+kubectl get secret -n <ns>          # List secrets
+kubectl describe secret <name>      # Details (base64 encoded)
+kubectl get secret <name> -o yaml   # Show secret yaml
+📦 Persistent Volumes (PV) & Claims (PVC)
+kubectl get pv                      # Show all PVs
+kubectl get pvc -n <ns>             # Show all PVCs
+kubectl describe pvc <name> -n <ns> # Details
+🛠️ Troubleshooting
+kubectl describe pod <pod> -n <ns>  # Check events/errors
+kubectl logs <pod> -n <ns>          # See logs
+kubectl get events -n <ns> --sort-by=.metadata.creationTimestamp  # Timeline of issues
+💡 Bonus
+kubectl get all -n <ns>             # Show everything in namespace
+kubectl apply -f file.yaml          # Create/update resources from YAML
+kubectl delete -f file.yaml         # Delete resources from YAML
