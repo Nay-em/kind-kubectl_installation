@@ -51,3 +51,6 @@ kubectl get events -n <ns> --sort-by=.metadata.creationTimestamp  # ⏰ Event ti
 kubectl get all -n <ns>             # 🎉 Show everything in namespace
 kubectl apply -f file.yaml          # 🏗️ Create/update resources
 kubectl delete -f file.yaml         # 🗑️ Delete resources
+
+
+ kubectl scale deployment <deployment name> -n <ns> --replicas=3  #make more pods
