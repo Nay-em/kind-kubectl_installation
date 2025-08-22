@@ -55,5 +55,6 @@ kubectl delete -f file.yaml         # 🗑️ Delete resources
 
  kubectl scale deployment <deployment name> -n <ns> --replicas=3  #make more pods
  kubectl run -i --tty load-generator --image=busybox -n apache /bin/sh #Crate a load generator for website traffic to test 
-
  while true; do wget -q -O- http://apache-service.apache.svc.cluster.local; done #Generate a load traffic on the website
+ sudo apt-get -y install docker.io #install docker
+ sudo usermod -aG docker $USER && newgrp docker #Give acces to docker to run
